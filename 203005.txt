@@ -1,0 +1,263 @@
+User@DESKTOP-7L0HNF3 MINGW64 ~
+$ git config --global user.name "MartinaV11"
+
+User@DESKTOP-7L0HNF3 MINGW64 ~
+$ git config --global user.email "velkovska.martina@yahoo.com"
+
+User@DESKTOP-7L0HNF3 MINGW64 ~
+$ git config --global --list
+user.name=MartinaV11
+user.email=velkovska.martina@yahoo.com
+
+User@DESKTOP-7L0HNF3 MINGW64 ~
+$ git clone https://github.com/MartinaV11/SI_2022_lab1_203005.git
+Cloning into 'SI_2022_lab1_203005'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+$ cd SI_2022_lab1_203005
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ nano shopping_list.txt
+
+limon
+banana
+kivi
+jagodi
+praska
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ ls
+README.md  shopping_list.txt
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ git add shopping_list.txt
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ git commit -m "Add 5 items to the shopping list"
+[master 3823bbc] Add 5 items to the shopping list
+ 1 file changed, 5 insertions(+)
+ create mode 100644 shopping_list.txt
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ nano shopping_list.txt
+limonx2
+bananax2
+kivix2
+jagodix2
+praskax2
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   shopping_list.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ git commit -a -m "Add quantities to the items"
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ git branch branch1
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ git branch branch2
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ git branch
+  branch1
+  branch2
+* master
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+
+$ git log
+commit bd75696b5da74e133cef1d74fa27722302b7c288 (HEAD -> master, branch2, branch1)
+Author: MartinaV11 <velkovska.martina@yahoo.com>
+Date:   Thu Apr 7 20:27:38 2022 +0200
+
+    Add quantities to the items
+
+commit 3823bbc4d415792495879d9ab555ac2d8f337229
+Author: MartinaV11 <velkovska.martina@yahoo.com>
+Date:   Thu Apr 7 20:10:46 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 64715fbf815158fb93aeb01d170012e1b033c1d9 (origin/master, origin/HEAD)
+Author: Martina Velkovska <103152926+MartinaV11@users.noreply.github.com>
+Date:   Thu Apr 7 01:17:47 2022 +0200
+
+    Update README.md
+
+commit 2ae1423034d562377d6cb9614275a1bc9c2b109a
+Author: Martina Velkovska <103152926+MartinaV11@users.noreply.github.com>
+Date:   Thu Apr 7 01:16:11 2022 +0200
+:...skipping...
+commit bd75696b5da74e133cef1d74fa27722302b7c288 (HEAD -> master, branch2, branch1)
+Author: MartinaV11 <velkovska.martina@yahoo.com>
+Date:   Thu Apr 7 20:27:38 2022 +0200
+
+    Add quantities to the items
+
+commit 3823bbc4d415792495879d9ab555ac2d8f337229
+Author: MartinaV11 <velkovska.martina@yahoo.com>
+Date:   Thu Apr 7 20:10:46 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 64715fbf815158fb93aeb01d170012e1b033c1d9 (origin/master, origin/HEAD)
+Author: Martina Velkovska <103152926+MartinaV11@users.noreply.github.com>
+Date:   Thu Apr 7 01:17:47 2022 +0200
+
+    Update README.md
+
+commit 2ae1423034d562377d6cb9614275a1bc9c2b109a
+Author: Martina Velkovska <103152926+MartinaV11@users.noreply.github.com>
+Date:   Thu Apr 7 01:16:11 2022 +0200
+
+    Initial commit
+
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 646 bytes | 646.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/MartinaV11/SI_2022_lab1_203005.git
+   64715fb..bd75696  master -> master
+branch 'master' set up to track 'origin/master'.
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ git checkout branch1
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (branch1)
+$ nano shopping_list.txt
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (branch1)
+$ git commit -a -m "Change quantity of item #5"
+warning: LF will be replaced by CRLF in shopping_list.txt.
+The file will have its original line endings in your working directory
+[branch1 38b5c6f] Change quantity of item #5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ nano shopping_list.txt
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ git commit -a -m "Change quantity of item #2"
+[master 33b6bed] Change quantity of item #2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ git merge branch1 
+"Dodavanje izmeni od branch"
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ git push -u origin master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 891 bytes | 891.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/MartinaV11/SI_2022_lab1_203005.git
+   bd75696..eff6ce0  master -> master
+branch 'master' set up to track 'origin/master'.
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ git checkout branch2
+Switched to branch 'branch2'
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (branch2)
+$ nano shopping_list.txt
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (branch2)
+$ git commit -a -m "Modify item #4"
+[branch2 f691050] Modify item #4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (branch2)
+$ git log
+commit f691050f6fb6433d66167b4833f6fe9836c38382 (HEAD -> branch2)
+Author: MartinaV11 <velkovska.martina@yahoo.com>
+Date:   Thu Apr 7 21:00:39 2022 +0200
+
+    Modify item #4
+
+commit bd75696b5da74e133cef1d74fa27722302b7c288
+Author: MartinaV11 <velkovska.martina@yahoo.com>
+Date:   Thu Apr 7 20:27:38 2022 +0200
+
+    Add quantities to the items
+
+commit 3823bbc4d415792495879d9ab555ac2d8f337229
+Author: MartinaV11 <velkovska.martina@yahoo.com>
+Date:   Thu Apr 7 20:10:46 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 64715fbf815158fb93aeb01d170012e1b033c1d9
+Author: Martina Velkovska <103152926+MartinaV11@users.noreply.github.com>
+Date:   Thu Apr 7 01:17:47 2022 +0200
+
+    Update README.md
+
+commit 2ae1423034d562377d6cb9614275a1bc9c2b109a
+Author: Martina Velkovska <103152926+MartinaV11@users.noreply.github.com>
+Date:   Thu Apr 7 01:16:11 2022 +0200
+
+    Initial commit
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (branch2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ git merge branch2
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+--Mi se pojavi konflikt pri spojuvanje na branch2 so master. Go resiv taka sto vlegov vo txt datotekata i gi izbrisav prethodnite promeni,
+napraviv git add i potoa git commit.
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master|MERGING)
+$ nano shopping_list.txt
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master|MERGING)
+$ git add shopping_list.txt
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master|MERGING)
+$ git commit -m "Resolving conflict"
+[master 50d5f32] Resolving conflict
+
+User@DESKTOP-7L0HNF3 MINGW64 ~/SI_2022_lab1_203005 (master)
+$ nano shopping_list.txt
